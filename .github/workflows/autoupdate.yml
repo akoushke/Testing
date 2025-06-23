@@ -1,0 +1,1121 @@
+temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands
+✨  Done in 0.03s.
+
+> @hulu/typescript
+yarn run v1.22.22
+$ echo 'temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands'
+temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands
+✨  Done in 0.03s.
+✨  Done in 15.81s.
+yarn install v1.22.22
+[1/4] 🔍  Resolving packages...
+warning Resolution field "@hulu/lr-engine-services-emu@2.0.0" is incompatible with requested version "@hulu/lr-engine-services-emu@^1.0.4"
+warning Resolution field "@hulu/lr-engine-services-emu@2.0.0" is incompatible with requested version "@hulu/lr-engine-services-emu@^1.0.4"
+warning Resolution field "@hulu/lr-engine-services-emu@2.0.0" is incompatible with requested version "@hulu/lr-engine-services-emu@^1.0.4"
+success Already up-to-date.
+$ cp tools/git-hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+✨  Done in 0.32s.
+yarn run v1.22.22
+$ webpack serve --progress
+NOTE:  George will not run if you browse to it at 0.0.0.0:8080 despite the message below.  You must setup a URL that is appropriate for your environment. If you are getting CORS errors, ensure you are using a CORS compliant URL (*.hulu.com).  If you are running on your local machine, http://localhost.prod.hulu.com:8080 or https://localhost.prod.hulu.com:8080 should "just work". Otherwise you will need to update your network settings. Add --https tag for things that require secure https connection such as playback.
+3% setup watch run BuildSettingsℹ ｢wds｣: Project is running at http://0.0.0.0:8080/
+ℹ ｢wds｣: webpack output is served from /
+ℹ ｢wds｣: Content not from webpack is served from /Users/arash.koushkebaghi/Hulu/twdc/george
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+
+export PATH="/opt/homebrew/opt/python@3.13/libexec/bin:$PATH"
+
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time Oh My Zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="gnzh"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Compile a George build via Gulp with configurable parameters.
+# Usage: "buildc production webkit debug"
+alias buildc='function _buildc() { yarn configure -e $1 -p $2 -b $3 && yarn build }; _buildc'
+
+"~/.zshrc" 131L, 5505B
+alias buildc='function _buildc() { yarn configure -e $1 -p $2 -b $3 && yarn build }; _buildc'
+
+# List all IPv4 IP addresses configured on your network interface, excluding loopback.
+# Usage: "ip"
+alias ip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='nvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch $(uname -m)"
+
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+##### PROD
+alias cdp='yarn configure -e production -b debug -p androidtv && yarn workspaces run build && yarn && yarn start'
+alias neutron='yarn configure -e production -b debug -p firetv-neutron  && yarn workspaces run build && yarn && yarn start'
+alias webkit='yarn configure -e production -b debug -p webkit && yarn workspaces run build && yarn && yarn start --https'
+
+##### STAGING
+alias neutron='yarn configure -e production -b debug -p firetv-neutron  && yarn workspaces run build && yarn && yarn start'
+37% building 2/4 entries 4580/4620 dependencies 598/1213 modules(node:8717) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./" in the "exports" field module resolution of the package at /Users/arash.koushkebaghi/Hulu/twdc/george/node_modules/css-loader/node_modules/postcss/package.json.
+Update this package.json to use a subpath pattern like "./*".
+(Use `node --trace-deprecation ...` to show where the warning was created)
+95% emitting emit(node:8717) [DEP_WEBPACK_MODULE_ISSUER] DeprecationWarning: Module.issuer: Use new ModuleGraph API
+ℹ ｢wdm｣: assets by path resources/ 11.7 MiB
+  assets by path resources/1080p/ 4.45 MiB 182 assets
+  assets by path resources/720p/ 3.27 MiB 182 assets
+  assets by path resources/fonts/ 2.23 MiB
+    assets by path resources/fonts/*.otf 1.12 MiB 10 assets
+    assets by path resources/fonts/*.ttf 1.11 MiB 4 assets
+  assets by path resources/sounds/ 1.75 MiB 6 assets
+assets by path *.js 12 MiB
+  asset george.js 12 MiB [emitted] (name: george) 1 related asset
+  asset boot.js 23.1 KiB [emitted] (name: boot) 1 related asset
+asset index.html 5.93 KiB [emitted]
+asset manifest.json 310 bytes [emitted]
+runtime modules 1.57 KiB 8 modules
+modules by path ./core/ 4.87 MiB
+  modules by path ./core/src/ 4.64 MiB 788 modules
+  modules by path ./core/resources/ 226 KiB
+    modules by path ./core/resources/templates/ 224 KiB 267 modules
+    2 modules
+  modules by path ./core/hboot/*.ts 6.5 KiB 3 modules
+modules by path ./node_modules/ 4.1 MiB 366 modules
+modules by path ./packages/ 1.78 MiB 379 modules
+modules by path ./platforms/ 51.2 KiB
+  modules by path ./platforms/common/ 40.8 KiB 13 modules
+  modules by path ./platforms/webkit/*.ts 1.93 KiB 3 modules
+  modules by path ./platforms/boot/ 8.23 KiB 2 modules
+  ./platforms/PropertyMerger.ts 228 bytes [built] [code generated]
+ws (ignored) 15 bytes [optional] [built] [code generated]
+webpack 5.31.0 compiled successfully in 16057 ms
+ℹ ｢wdm｣: Compiled successfully.
+No issues found.
+3% setup watch run WebpackDevMiddlewareℹ ｢wdm｣: Compiling...
+ℹ ｢wdm｣: assets by status 9.82 MiB [cached] 381 assets
+assets by status 13.9 MiB [emitted]
+  assets by path resources/ 1.9 MiB
+    assets by path resources/1080p/*.css 974 KiB
+      asset resources/1080p/720p-assets.css 488 KiB [emitted]
+      asset resources/1080p/1080p-assets.css 486 KiB [emitted]
+    assets by path resources/720p/*.css 973 KiB
+      asset resources/720p/1080p-assets.css 488 KiB [emitted]
+      asset resources/720p/720p-assets.css 485 KiB [emitted]
+  asset george.js 12 MiB [emitted] (name: george) 1 related asset
+  asset index.html 5.93 KiB [emitted]
+  asset manifest.json 310 bytes [emitted]
+cached modules 10.8 MiB [cached] 1877 modules
+runtime modules 1.57 KiB 8 modules
+javascript modules 25.9 KiB
+  ./core/resources/templates/ sync \.underscore$ 13.4 KiB [built]
+  ./node_modules/socket.io-client/lib/manager.js 12.3 KiB [code generated]
+  ./node_modules/engine.io-client/lib/index.js 140 bytes [code generated]
+webpack 5.31.0 compiled successfully in 5552 ms
+ℹ ｢wdm｣: Compiled successfully.
+No issues found.
+^C
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Hulu/twdc/george  ‹main›
+╰─➤  !vi                                                                                                                                                                                                                                       130 ↵
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Hulu/twdc/george  ‹main›
+╰─➤  vi ~/.zshrc                                                                                                                                                                                                                               130 ↵
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Hulu/twdc/george  ‹main›
+╰─➤  !source
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Hulu/twdc/george  ‹main›
+╰─➤  source ~/.zshrc
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Hulu/twdc/george  ‹main›
+╰─➤  webkit-staging
+yarn run v1.22.22
+$ ts-node build/configure/index.ts -e staging -b debug -p webkit
+Saving configuration to /Users/arash.koushkebaghi/Hulu/twdc/george/.configuration.json: {
+    "platform": "webkit",
+    "build": "debug",
+    "environment": "staging",
+    "logLevel": "warn",
+    "binaryVersion": 1,
+    "uiAutomation": false,
+    "reduxSafety": false,
+    "reactSafety": true,
+    "sourceMapType": "source-map",
+    "minimize": false
+}
+✨  Done in 0.54s.
+yarn workspaces v1.22.22
+
+> @hulu/eslint
+yarn run v1.22.22
+$ echo 'temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands'
+temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands
+✨  Done in 0.03s.
+
+> @types/george-global-types
+yarn run v1.22.22
+warning package.json: No license field
+$ echo 'temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands'
+temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands
+✨  Done in 0.03s.
+
+> @hulu/jest
+yarn run v1.22.22
+$ echo 'temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands'
+temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands
+✨  Done in 0.03s.
+
+> @hulu/lr-components
+yarn run v1.22.22
+$ npm-run-all clean copy:scss
+$ rimraf lib/ dist/
+$ mkdir -p dist/components && mkdir -p dist/components/flex && cp src/components/*.scss dist/components && cp src/components/flex/*.scss dist/components/flex
+✨  Done in 0.69s.
+
+> @hulu/lr-engine-bolt
+yarn run v1.22.22
+$ tsc
+✨  Done in 0.94s.
+
+> @hulu/lr-engine-playback
+yarn run v1.22.22
+warning package.json: No license field
+$ node writePlayerVersion.js
+$ tsc
+✨  Done in 2.00s.
+
+> @hulu/lr-engine-services-ariel
+yarn run v1.22.22
+warning package.json: No license field
+$ tsc
+✨  Done in 0.52s.
+
+> @hulu/lr-engine-services-client
+yarn run v1.22.22
+warning package.json: No license field
+$ tsc
+✨  Done in 0.55s.
+
+> @hulu/lr-engine-services-content-services
+yarn run v1.22.22
+warning package.json: No license field
+$ tsc
+✨  Done in 0.83s.
+
+> @hulu/lr-engine-services-emu
+yarn run v1.22.22
+warning package.json: No license field
+$ tsc
+✨  Done in 0.60s.
+
+> @hulu/lr-engine-services-flex
+yarn run v1.22.22
+warning package.json: No license field
+$ tsc
+✨  Done in 1.02s.
+
+> @hulu/lr-engine-services-graphql
+yarn run v1.22.22
+$ tsc
+✨  Done in 0.91s.
+
+> @hulu/lr-engine-services-guide
+yarn run v1.22.22
+$ tsc
+✨  Done in 0.60s.
+
+> @hulu/lr-engine-services-kinko
+yarn run v1.22.22
+warning package.json: No license field
+$ tsc
+✨  Done in 0.66s.
+
+> @hulu/lr-engine-services-sauron
+yarn run v1.22.22
+warning package.json: No license field
+$ tsc
+✨  Done in 0.58s.
+
+> @hulu/lr-engine-services-spearmint
+yarn run v1.22.22
+warning package.json: No license field
+$ tsc
+✨  Done in 0.57s.
+
+> @hulu/lr-engine-signup
+yarn run v1.22.22
+$ tsc
+✨  Done in 1.23s.
+
+> @hulu/lr-react-nav
+yarn run v1.22.22
+$ tsc
+✨  Done in 1.05s.
+
+> @hulu/lr-screen-reader
+yarn run v1.22.22
+$ tsc
+✨  Done in 0.89s.
+
+> @hulu/mocha
+yarn run v1.22.22
+$ echo 'temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands'
+temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands
+✨  Done in 0.03s.
+
+> @hulu/typescript
+yarn run v1.22.22
+$ echo 'temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands'
+temp placeholder script until yarn 2 for-each so we can run yarn workspaces commands
+✨  Done in 0.03s.
+✨  Done in 15.92s.
+yarn install v1.22.22
+[1/4] 🔍  Resolving packages...
+warning Resolution field "@hulu/lr-engine-services-emu@2.0.0" is incompatible with requested version "@hulu/lr-engine-services-emu@^1.0.4"
+warning Resolution field "@hulu/lr-engine-services-emu@2.0.0" is incompatible with requested version "@hulu/lr-engine-services-emu@^1.0.4"
+warning Resolution field "@hulu/lr-engine-services-emu@2.0.0" is incompatible with requested version "@hulu/lr-engine-services-emu@^1.0.4"
+success Already up-to-date.
+$ cp tools/git-hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+✨  Done in 0.34s.
+yarn run v1.22.22
+$ webpack serve --progress --https
+NOTE:  George will not run if you browse to it at 0.0.0.0:8080 despite the message below.  You must setup a URL that is appropriate for your environment. If you are getting CORS errors, ensure you are using a CORS compliant URL (*.hulu.com).  If you are running on your local machine, http://localhost.prod.hulu.com:8080 or https://localhost.prod.hulu.com:8080 should "just work". Otherwise you will need to update your network settings. Add --https tag for things that require secure https connection such as playback.
+ℹ ｢wds｣: Generating SSL Certificate
+3% setup watch run BuildSettingsℹ ｢wds｣: Project is running at https://0.0.0.0:8080/
+ℹ ｢wds｣: webpack output is served from /
+ℹ ｢wds｣: Content not from webpack is served from /Users/arash.koushkebaghi/Hulu/twdc/george
+37% building 2/4 entries 4626/4677 dependencies 601/1215 modules(node:26874) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./" in the "exports" field module resolution of the package at /Users/arash.koushkebaghi/Hulu/twdc/george/node_modules/css-loader/node_modules/postcss/package.json.
+Update this package.json to use a subpath pattern like "./*".
+(Use `node --trace-deprecation ...` to show where the warning was created)
+95% emitting emit(node:26874) [DEP_WEBPACK_MODULE_ISSUER] DeprecationWarning: Module.issuer: Use new ModuleGraph API
+ℹ ｢wdm｣: assets by path resources/ 11.7 MiB
+  assets by path resources/1080p/ 4.45 MiB 182 assets
+  assets by path resources/720p/ 3.27 MiB 182 assets
+  assets by path resources/fonts/ 2.23 MiB
+    assets by path resources/fonts/*.otf 1.12 MiB 10 assets
+    assets by path resources/fonts/*.ttf 1.11 MiB 4 assets
+  assets by path resources/sounds/ 1.75 MiB 6 assets
+assets by path *.js 12 MiB
+  asset george.js 12 MiB [emitted] (name: george) 1 related asset
+  asset boot.js 23.1 KiB [emitted] (name: boot) 1 related asset
+asset index.html 5.93 KiB [emitted]
+asset manifest.json 310 bytes [emitted]
+runtime modules 1.57 KiB 8 modules
+modules by path ./core/ 4.87 MiB
+  modules by path ./core/src/ 4.64 MiB 788 modules
+  modules by path ./core/resources/ 226 KiB
+    modules by path ./core/resources/templates/ 224 KiB 267 modules
+    2 modules
+  modules by path ./core/hboot/*.ts 6.5 KiB 3 modules
+modules by path ./node_modules/ 4.1 MiB 366 modules
+modules by path ./packages/ 1.78 MiB 379 modules
+modules by path ./platforms/ 51.2 KiB
+  modules by path ./platforms/common/ 40.8 KiB 13 modules
+  modules by path ./platforms/webkit/*.ts 1.93 KiB 3 modules
+  modules by path ./platforms/boot/ 8.23 KiB 2 modules
+  ./platforms/PropertyMerger.ts 228 bytes [built] [code generated]
+ws (ignored) 15 bytes [optional] [built] [code generated]
+webpack 5.31.0 compiled successfully in 15260 ms
+ℹ ｢wdm｣: Compiled successfully.
+No issues found.
+3% setup watch run WebpackDevMiddlewareℹ ｢wdm｣: Compiling...
+10% building 0/1 entries 0/0 dependencies 0/0 modulesℹ ｢wdm｣: wait until bundle finished: /
+95% emitting emitℹ ｢wdm｣: wait until bundle finished: /
+ℹ ｢wdm｣: assets by status 9.82 MiB [cached] 381 assets
+assets by status 13.9 MiB [emitted]
+  assets by path resources/ 1.9 MiB
+    assets by path resources/1080p/*.css 974 KiB
+      asset resources/1080p/720p-assets.css 488 KiB [emitted]
+      asset resources/1080p/1080p-assets.css 486 KiB [emitted]
+    assets by path resources/720p/*.css 973 KiB
+      asset resources/720p/1080p-assets.css 488 KiB [emitted]
+      asset resources/720p/720p-assets.css 485 KiB [emitted]
+  asset george.js 12 MiB [emitted] (name: george) 1 related asset
+  asset index.html 5.93 KiB [emitted]
+  asset manifest.json 310 bytes [emitted]
+cached modules 10.8 MiB [cached] 1877 modules
+runtime modules 1.57 KiB 8 modules
+javascript modules 25.9 KiB
+  ./core/resources/templates/ sync \.underscore$ 13.4 KiB [built]
+  ./node_modules/socket.io-client/lib/manager.js 12.3 KiB [code generated]
+  ./node_modules/engine.io-client/lib/index.js 140 bytes [code generated]
+webpack 5.31.0 compiled successfully in 5475 ms
+ℹ ｢wdm｣: Compiled successfully.
+No issues found.
+^C
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Hulu/twdc/george  ‹main›
+╰─➤  gl                                                                                                                                                                                                                                        130 ↵
+remote: Enumerating objects: 501, done.
+remote: Counting objects: 100% (490/490), done.
+remote: Compressing objects: 100% (163/163), done.
+remote: Total 501 (delta 368), reused 399 (delta 326), pack-reused 11
+Receiving objects: 100% (501/501), 425.20 KiB | 1.76 MiB/s, done.
+Resolving deltas: 100% (369/369), completed with 81 local objects.
+From github.twdcgrid.net:hulu-bbd/george
+   f9bd76400..68de40aa8  main                              -> origin/main
+   66354d208..29acb0847  annmarie/HUTV-52052               -> origin/annmarie/HUTV-52052
+   197be7c61..6c0e30791  arash/deeplinkError               -> origin/arash/deeplinkError
+   00627369f..ccd1aa934  features/onetrust-ewcs            -> origin/features/onetrust-ewcs
+   1f15b0144..3d44e57ef  olena/debug-deep-link-page        -> origin/olena/debug-deep-link-page
+ * [new branch]          stanislav/fix-expanded-modal-page -> origin/stanislav/fix-expanded-modal-page
+ * [new branch]          tasks/androidtv-neutron-ewcs      -> origin/tasks/androidtv-neutron-ewcs
+Updating f9bd76400..68de40aa8
+Fast-forward
+ build/plugins/GeorgeScssPlugin.ts                                                                                        |  23 ++++++++-
+ build/plugins/WarnYarnLinkPlugin.ts                                                                                      |   1 +
+ core/resources/css/_common.scss                                                                                          |   3 ++
+ core/resources/css/_iconography.scss                                                                                     |  23 ++++++++-
+ core/resources/css/_layout.scss                                                                                          |   8 +++
+ core/resources/css/_mixins.scss                                                                                          |   7 +++
+ core/resources/css/_type.scss                                                                                            |   6 +++
+ core/resources/images/common/1080p/precache/bg-kid-gradient.png                                                          | Bin 0 -> 1702464 bytes
+ core/resources/images/common/1080p/precache/checkbox-consent-focus.png                                                   | Bin 0 -> 307 bytes
+ core/resources/images/common/1080p/precache/checkbox-consent.png                                                         | Bin 0 -> 295 bytes
+ core/resources/images/common/1080p/precache/icon-flex-expand-box.png                                                     | Bin 0 -> 622 bytes
+ core/resources/images/common/720p/precache/bg-kid-gradient.png                                                           | Bin 0 -> 1702464 bytes
+ core/resources/images/common/720p/precache/checkbox-consent-focus.png                                                    | Bin 0 -> 241 bytes
+ core/resources/images/common/720p/precache/checkbox-consent.png                                                          | Bin 0 -> 234 bytes
+ core/resources/images/common/720p/precache/icon-flex-expand-box.png                                                      | Bin 0 -> 622 bytes
+ core/src/Commands.ts                                                                                                     |  13 ++++-
+ core/src/DialogUris.ts                                                                                                   |  19 +++++---
+ core/src/Init.ts                                                                                                         |   1 +
+ core/src/RawValues.ts                                                                                                    |   4 ++
+ core/src/defaults/GeneralDefaults.ts                                                                                     |   5 ++
+ core/src/defaults/LoggingDefaults.ts                                                                                     |   3 +-
+ core/src/defaults/StringDefaults.ts                                                                                      |  15 +++---
+ core/src/models/interfaces/LayoutValues.d.ts                                                                             |   4 ++
+ core/src/models/interfaces/OverviewInterfaces.ts                                                                         |  47 ++++++++++++++++++
+ core/src/models/interfaces/ValuesInterfaces.ts                                                                           |   1 +
+ core/src/modules/ConsentManager.ts                                                                                       | 311 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ core/src/modules/KinkoOperations.ts                                                                                      |   1 +
+ core/src/react/components/BasicDialog/DialogPage.tsx                                                                     |  35 ++++++++++---
+ core/src/react/components/BasicDialog/DialogPresets.ts                                                                   |  85 ++++++++++++++++++++++++++++++--
+ core/src/react/components/BasicDialog/dialog.scss                                                                        |  56 +++++++++++++++++++++
+ core/src/react/components/Checkbox/Checkbox.module.scss                                                                  |  98 ++++++++++++++++++++++++++++---------
+ core/src/react/components/Checkbox/Checkbox.tsx                                                                          |  14 ++++--
+ core/src/react/components/FixedBottomBar/FixedBottomBar.module.scss                                                      |  62 +++++++++++++++++++++++
+ core/src/react/components/FixedBottomBar/FixedBottomBar.tsx                                                              |  51 +++++++++++++++++++
+ core/src/react/components/List.tsx                                                                                       | 110 ++++++++++++++++++++++++++++-------------
+ core/src/react/components/ListItem.tsx                                                                                   |  49 ++++++-------------
+ core/src/react/components/ListItemFlex/ListItemFlex.module.scss                                                          |  11 +++++
+ core/src/react/components/ListItemFlex/ListItemFlex.tsx                                                                  |  59 ++++++++++++++++++++++
+ core/src/react/components/ListItemFlex/index.ts                                                                          |   3 ++
+ core/src/react/components/ListScrollbar/ListScrollbar.module.scss                                                        |  31 ++++++++++++
+ core/src/react/components/ListScrollbar/ListScrollbar.tsx                                                                | 103 +++++++++++++++++++++++++++++++++++++++
+ core/src/react/components/ListScrollbar/index.ts                                                                         |   3 ++
+ core/src/react/components/Overlay.tsx                                                                                    |  24 +++++++++
+ core/src/react/components/flex/components/FlexActionButton.tsx                                                           |  28 ++++++++---
+ core/src/react/components/flex/components/FlexInteractionList.tsx                                                        |  15 +++++-
+ core/src/react/components/flex/components/FlexInteractionListItem.scss                                                   |   6 ++-
+ core/src/react/components/flex/components/FlexInteractionListItem.tsx                                                    |  30 ++++++++++--
+ core/src/react/components/flex/components/v2/FlexComponentFactory.tsx                                                    |   8 ++-
+ core/src/react/components/flex/components/v2/FlexCustomInteraction.tsx                                                   |   2 +-
+ core/src/react/components/flex/components/v2/FlexExpandableBox/FlexExpandableBox.module.scss                             |  41 ++++++++++++++++
+ core/src/react/components/flex/components/v2/FlexExpandableBox/FlexExpandableBox.tsx                                     |  47 ++++++++++++++++++
+ core/src/react/components/flex/components/v2/FlexFormInteraction/FlexFormInteraction.module.scss                         |  13 +++++
+ core/src/react/components/flex/components/v2/FlexFormInteraction/FlexFormInteraction.tsx                                 |  71 +++++++++++++++++++++++++++
+ core/src/react/components/flex/components/v2/FlexFormInteraction/index.ts                                                |   3 ++
+ core/src/react/components/flex/components/v2/FlexImage.tsx                                                               |   5 +-
+ core/src/react/components/flex/components/v2/FlexInteractionList.tsx                                                     |  20 +++++++-
+ core/src/react/components/flex/components/v2/FlexInteractionMapper.ts                                                    |  17 ++++---
+ core/src/react/components/flex/components/v2/FlexRichText.tsx                                                            |   6 +--
+ core/src/react/components/flex/components/v2/FlexText.tsx                                                                |   6 ++-
+ core/src/react/components/flex/containers/FlexConsentList/FlexConsentList.module.scss                                    |  15 ++++++
+ core/src/react/components/flex/containers/FlexConsentList/FlexConsentList.tsx                                            | 153 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ core/src/react/components/flex/containers/FlexConsentList/index.ts                                                       |   3 ++
+ core/src/react/components/flex/mappers/FlexCopyMapper.ts                                                                 |  18 ++++++-
+ core/src/react/components/flex/schemas/index.ts                                                                          |   3 ++
+ core/src/react/interfaces/ListItemProps.ts                                                                               |  35 +++++++++++++
+ core/src/react/support/wrapWithMVVMElement.tsx                                                                           |  42 +++++++++++++---
+ core/src/workflows/account/AboutPage/AboutPage.tsx                                                                       |  17 +------
+ core/src/workflows/account/AboutPage/AboutPageService.ts                                                                 |  26 ----------
+ core/src/workflows/account/AccountSectionContainer/AccountSectionContainer.scss                                          |   6 +++
+ core/src/workflows/account/AccountSectionContainer/AccountSectionContainer.tsx                                           |  22 ++++++---
+ core/src/workflows/account/AccountSectionContainer/AccountSectionContainerService.ts                                     |  27 ++++++++--
+ core/src/workflows/account/AccountWorkflow.ts                                                                            |  94 +++++++++++++++++++++++++++++++++++
+ core/src/workflows/account/LegalPage/LegalPage.tsx                                                                       |  70 ++++++++++++++++++++++++++
+ core/src/workflows/account/LegalPage/LegalPageService.ts                                                                 |  17 +++++++
+ core/src/workflows/account/LegalPage/index.tsx                                                                           |   3 ++
+ core/src/workflows/common/interfaces/Dialog.ts                                                                           |   5 +-
+ core/src/workflows/common/widgets/TrayHubSectionContainer.ts                                                             |   4 +-
+ core/src/workflows/debug/DebugMenuOptions.ts                                                                             |  64 +++++++++++++++++++-----
+ core/src/workflows/debug/components/sandbox/ConsentPages.tsx                                                             |  16 ++++++
+ core/src/workflows/debug/components/sandbox/ConsentSDKPage.tsx                                                           | 148 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ core/src/workflows/debug/components/sandbox/FlexCopyPage.tsx                                                             |  10 +++-
+ core/src/workflows/debug/components/sandbox/FlexFormInteractionPage.tsx                                                  | 128 ++++++++++++++++++++++++++++++++++++++++++++++++
+ core/src/workflows/flex/FlexWorkflow.ts                                                                                  |   4 +-
+ core/src/workflows/flex/actions/FlexActionHandler.ts                                                                     |   4 ++
+ core/src/workflows/flex/containers/FlexConsentSync/FlexConsentSync.module.scss                                           |   7 +++
+ core/src/workflows/flex/containers/FlexConsentSync/FlexConsentSync.tsx                                                   | 137 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ core/src/workflows/flex/containers/FlexConsentSync/FlexConsentSyncMocks.ts                                               | 284 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ core/src/workflows/flex/containers/FlexErrorBoundary/__snapshots__/FlexErrorBoundary.test.tsx.snap                       |   2 +-
+ core/src/workflows/flex/containers/FlexExpandedModal/FlexExpandedModal.tsx                                               |  51 +++++++++++++++++++
+ core/src/workflows/flex/containers/FlexInterstitial/__snapshots__/FlexInterstitial.test.tsx.snap                         |   4 +-
+ core/src/workflows/flex/containers/FlexOtp/__snapshots__/FlexOtp.test.tsx.snap                                           |   4 +-
+ core/src/workflows/login/LoginWorkflow.ts                                                                                |   4 +-
+ core/src/workflows/navigation/SitemapUtils.ts                                                                            |   7 +++
+ core/src/workflows/onboarding/OnboardingWorkflow.ts                                                                      | 152 +++++++++++++++++++++++++++++++++++++++++++--------------
+ core/src/workflows/outOfHousehold/OutOfHouseholdWorkflow.ts                                                              |  10 ++--
+ core/src/workflows/outOfHousehold/containers/FlexOutOfHouseholdBlock/__snapshots__/FlexOutOfHouseholdBlock.test.tsx.snap |  20 ++++----
+ core/src/workflows/profiles/viewmodels/CreateProfileViewModel.ts                                                         |   5 ++
+ core/src/workflows/system/SystemWorkflow.ts                                                                              |  75 +++++++++-------------------
+ core/src/workflows/transit/TransitWorkflow.ts                                                                            |  24 +++++++--
+ package.json                                                                                                             |  12 +++--
+ packages/lr-components/src/components/flex/FlexIcon.tsx                                                                  |   2 +-
+ packages/lr-components/src/components/flex/FlexImage.tsx                                                                 |   6 ++-
+ packages/lr-components/src/components/flex/FlexText.tsx                                                                  |   9 +++-
+ packages/lr-components/src/components/flex/TemplateMapper.ts                                                             |   3 ++
+ packages/lr-engine-consent-sdk/.eslintrc.js                                                                              |   9 ++++
+ packages/lr-engine-consent-sdk/__tests__/CoreStorageProvider.test.ts                                                     |  61 +++++++++++++++++++++++
+ packages/lr-engine-consent-sdk/__tests__/LocalStore.test.ts                                                              |  56 +++++++++++++++++++++
+ packages/lr-engine-consent-sdk/index.ts                                                                                  |   8 +++
+ packages/lr-engine-consent-sdk/jest.config.js                                                                            |   4 ++
+ packages/lr-engine-consent-sdk/jest.setup.js                                                                             |   1 +
+ packages/lr-engine-consent-sdk/package.json                                                                              |  17 +++++++
+ packages/lr-engine-consent-sdk/src/CoreStorageProvider.ts                                                                | 159 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ packages/lr-engine-consent-sdk/src/LocalStore.ts                                                                         |  97 ++++++++++++++++++++++++++++++++++++
+ packages/lr-engine-consent-sdk/tsconfig.eslint.json                                                                      |   4 ++
+ packages/lr-engine-consent-sdk/tsconfig.json                                                                             |  20 ++++++++
+ packages/lr-engine-playback/src/common/playlist/PlaylistRequest.ts                                                       |  41 ++++++++++++++++
+ packages/lr-engine-playback/tests/common/test_Playlist.js                                                                |   7 +++
+ packages/lr-engine-services-flex/src/index.ts                                                                            |  11 ++++-
+ packages/lr-engine-services-flex/src/models/common/Action.ts                                                             |  22 +++++++--
+ packages/lr-engine-services-flex/src/models/common/ActionInteraction.ts                                                  |  34 +++++++++++++
+ packages/lr-engine-services-flex/src/models/common/BasicModal.ts                                                         |  98 +++++++++++++++++++++++++++++++++++++
+ packages/lr-engine-services-flex/src/models/common/ConsentMetadata.ts                                                    |  98 +++++++++++++++++++++++++++++++++++++
+ packages/lr-engine-services-flex/src/models/common/ConsentSection.ts                                                     | 104 +++++++++++++++++++++++++++++++++++++++
+ packages/lr-engine-services-flex/src/models/common/CopyCypher.ts                                                         |  52 ++++++++++++++++++++
+ packages/lr-engine-services-flex/src/models/common/ExpandableText.ts                                                     |  89 +++++++++++++++++++++++++++++++++
+ packages/lr-engine-services-flex/src/models/common/FormInteraction.ts                                                    |  89 +++++++++++++++++++++++++++++++++
+ packages/lr-engine-services-flex/src/models/common/FormInteractionData.ts                                                |  73 +++++++++++++++++++++++++++
+ packages/lr-engine-services-flex/src/models/common/Image.ts                                                              |  12 +++--
+ packages/lr-engine-services-flex/src/models/common/InteractionElement.ts                                                 |  40 ++++++++++-----
+ packages/lr-engine-services-flex/src/models/common/InteractionList.ts                                                    |  12 +++++
+ packages/lr-engine-services-flex/src/models/common/MetricsElement.ts                                                     |   9 ++--
+ packages/lr-engine-services-flex/src/models/common/MetricsPayload.ts                                                     |   8 +++
+ packages/lr-engine-services-flex/src/models/responses/FlexConsent/FlexPreferenceCenter.ts                                |  58 ++++++++++++++++++++++
+ packages/lr-engine-services-flex/src/models/responses/FlexScreen/FlexScreenData.ts                                       |   8 +++
+ packages/lr-engine-services-flex/src/models/types/LeadingIcon.ts                                                         |   2 +-
+ packages/lr-engine-services-flex/src/utils/DictionaryHelper.ts                                                           |  20 ++++++++
+ packages/lr-engine-services-graphql/src/createConsentToken.ts                                                            |  21 ++++++++
+ packages/lr-engine-services-graphql/src/generated/index.ts                                                               |  23 +++++++++
+ packages/lr-engine-services-graphql/src/index.ts                                                                         |   1 +
+ packages/lr-engine-services-graphql/src/schema/createConsentToken.graphql                                                |   9 ++++
+ packages/lr-engine-services-graphql/src/schema/schema.graphql                                                            |  11 +++++
+ packages/lr-engine-signup/src/models/flex/types/index.ts                                                                 |   2 +-
+ packages/lr-react-nav/src/SpatialNavigation.ts                                                                           |   6 +++
+ platforms/cdp/androidtv/index.ts                                                                                         |   1 +
+ platforms/cdp/common/Overlay.tsx                                                                                         | 172 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ platforms/cdp/common/Scrollable.tsx                                                                                      |  16 ++++++
+ platforms/cdp/firetv/index.ts                                                                                            |   1 +
+ platforms/cdp/ps4/index.ts                                                                                               |   2 +
+ platforms/cdp/samsungtizen/index.ts                                                                                      |   2 +
+ platforms/cdp/switch/index.ts                                                                                            |   2 +
+ platforms/cdp/xboxone/index.ts                                                                                           |   1 +
+ platforms/comcast-live/index.ts                                                                                          |   2 +
+ platforms/comcast/index.ts                                                                                               |   2 +
+ platforms/common/Overlay.tsx                                                                                             |  24 +++++++++
+ platforms/lgbbd/index.ts                                                                                                 |   1 +
+ platforms/neutron/firetv-neutron/index.ts                                                                                |   1 +
+ platforms/neutron/xboxone-neutron/index.ts                                                                               |   1 +
+ platforms/tizenbbd/index.ts                                                                                              |   2 +
+ platforms/viziosmartcast/index.ts                                                                                        |   2 +
+ platforms/webkit/index.ts                                                                                                |   2 +
+ test/core/src/workflows/account/viewmodels/test_AboutPagePayload.js                                                      |  51 +------------------
+ test/core/src/workflows/account/viewmodels/test_LegalPagePayload.js                                                      |  79 ++++++++++++++++++++++++++++++
+ test/core/src/workflows/common/widgets/test_TrayHubSectionContainer.js                                                   |   2 +-
+ test/core/src/workflows/onboarding/test_OnboardingWorkflow.js                                                            |   6 +--
+ test/core/src/workflows/system/test_SystemWorkflow.js                                                                    |  14 ++++++
+ test/core/src/workflows/transit/test_TransitWorkflow.js                                                                  |  22 ++++++---
+ test/jest/core/src/react/components/__snapshots__/Checkbox.test.tsx.snap                                                 |   2 +-
+ test/jest/core/src/workflows/account/AboutPage.test.tsx                                                                  |  70 +-------------------------
+ test/jest/core/src/workflows/account/AccountSectionContainer.test.tsx                                                    |   4 ++
+ test/jest/core/src/workflows/account/LegalPage.test.tsx                                                                  | 165 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ tsconfig.json                                                                                                            |   2 +-
+ webpack.config.ts                                                                                                        |  22 +++++++++
+ yarn.lock                                                                                                                |  56 ++++++++++++---------
+ 173 files changed, 4947 insertions(+), 537 deletions(-)
+ create mode 100644 core/resources/css/_layout.scss
+ create mode 100644 core/resources/images/common/1080p/precache/bg-kid-gradient.png
+ create mode 100644 core/resources/images/common/1080p/precache/checkbox-consent-focus.png
+ create mode 100644 core/resources/images/common/1080p/precache/checkbox-consent.png
+ create mode 100644 core/resources/images/common/1080p/precache/icon-flex-expand-box.png
+ create mode 100644 core/resources/images/common/720p/precache/bg-kid-gradient.png
+ create mode 100644 core/resources/images/common/720p/precache/checkbox-consent-focus.png
+ create mode 100644 core/resources/images/common/720p/precache/checkbox-consent.png
+ create mode 100644 core/resources/images/common/720p/precache/icon-flex-expand-box.png
+ create mode 100644 core/src/models/interfaces/OverviewInterfaces.ts
+ create mode 100644 core/src/modules/ConsentManager.ts
+ create mode 100644 core/src/react/components/FixedBottomBar/FixedBottomBar.module.scss
+ create mode 100644 core/src/react/components/FixedBottomBar/FixedBottomBar.tsx
+ create mode 100644 core/src/react/components/ListItemFlex/ListItemFlex.module.scss
+ create mode 100644 core/src/react/components/ListItemFlex/ListItemFlex.tsx
+ create mode 100644 core/src/react/components/ListItemFlex/index.ts
+ create mode 100644 core/src/react/components/ListScrollbar/ListScrollbar.module.scss
+ create mode 100644 core/src/react/components/ListScrollbar/ListScrollbar.tsx
+ create mode 100644 core/src/react/components/ListScrollbar/index.ts
+ create mode 100644 core/src/react/components/Overlay.tsx
+ create mode 100644 core/src/react/components/flex/components/v2/FlexExpandableBox/FlexExpandableBox.module.scss
+ create mode 100644 core/src/react/components/flex/components/v2/FlexExpandableBox/FlexExpandableBox.tsx
+ create mode 100644 core/src/react/components/flex/components/v2/FlexFormInteraction/FlexFormInteraction.module.scss
+ create mode 100644 core/src/react/components/flex/components/v2/FlexFormInteraction/FlexFormInteraction.tsx
+ create mode 100644 core/src/react/components/flex/components/v2/FlexFormInteraction/index.ts
+ create mode 100644 core/src/react/components/flex/containers/FlexConsentList/FlexConsentList.module.scss
+ create mode 100644 core/src/react/components/flex/containers/FlexConsentList/FlexConsentList.tsx
+ create mode 100644 core/src/react/components/flex/containers/FlexConsentList/index.ts
+ create mode 100644 core/src/react/interfaces/ListItemProps.ts
+ create mode 100644 core/src/workflows/account/LegalPage/LegalPage.tsx
+ create mode 100644 core/src/workflows/account/LegalPage/LegalPageService.ts
+ create mode 100644 core/src/workflows/account/LegalPage/index.tsx
+ create mode 100644 core/src/workflows/debug/components/sandbox/ConsentPages.tsx
+ create mode 100644 core/src/workflows/debug/components/sandbox/ConsentSDKPage.tsx
+ create mode 100644 core/src/workflows/debug/components/sandbox/FlexFormInteractionPage.tsx
+ create mode 100644 core/src/workflows/flex/containers/FlexConsentSync/FlexConsentSync.module.scss
+ create mode 100644 core/src/workflows/flex/containers/FlexConsentSync/FlexConsentSync.tsx
+ create mode 100644 core/src/workflows/flex/containers/FlexConsentSync/FlexConsentSyncMocks.ts
+ create mode 100644 core/src/workflows/flex/containers/FlexExpandedModal/FlexExpandedModal.tsx
+ create mode 100644 packages/lr-engine-consent-sdk/.eslintrc.js
+ create mode 100644 packages/lr-engine-consent-sdk/__tests__/CoreStorageProvider.test.ts
+ create mode 100644 packages/lr-engine-consent-sdk/__tests__/LocalStore.test.ts
+ create mode 100644 packages/lr-engine-consent-sdk/index.ts
+ create mode 100644 packages/lr-engine-consent-sdk/jest.config.js
+ create mode 100644 packages/lr-engine-consent-sdk/jest.setup.js
+ create mode 100644 packages/lr-engine-consent-sdk/package.json
+ create mode 100644 packages/lr-engine-consent-sdk/src/CoreStorageProvider.ts
+ create mode 100644 packages/lr-engine-consent-sdk/src/LocalStore.ts
+ create mode 100644 packages/lr-engine-consent-sdk/tsconfig.eslint.json
+ create mode 100644 packages/lr-engine-consent-sdk/tsconfig.json
+ create mode 100644 packages/lr-engine-services-flex/src/models/common/BasicModal.ts
+ create mode 100644 packages/lr-engine-services-flex/src/models/common/ConsentMetadata.ts
+ create mode 100644 packages/lr-engine-services-flex/src/models/common/ConsentSection.ts
+ create mode 100644 packages/lr-engine-services-flex/src/models/common/ExpandableText.ts
+ create mode 100644 packages/lr-engine-services-flex/src/models/common/FormInteraction.ts
+ create mode 100644 packages/lr-engine-services-flex/src/models/common/FormInteractionData.ts
+ create mode 100644 packages/lr-engine-services-flex/src/models/responses/FlexConsent/FlexPreferenceCenter.ts
+ create mode 100644 packages/lr-engine-services-flex/src/utils/DictionaryHelper.ts
+ create mode 100644 packages/lr-engine-services-graphql/src/createConsentToken.ts
+ create mode 100644 packages/lr-engine-services-graphql/src/schema/createConsentToken.graphql
+ create mode 100644 platforms/cdp/common/Overlay.tsx
+ create mode 100644 platforms/common/Overlay.tsx
+ create mode 100644 test/core/src/workflows/account/viewmodels/test_LegalPagePayload.js
+ create mode 100644 test/jest/core/src/workflows/account/LegalPage.test.tsx
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Hulu/twdc/george  ‹main›
+╰─➤  glo
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Hulu/twdc/george  ‹main›
+╰─➤  git branch                                                                                                                                                                                                                                141 ↵
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Hulu/twdc/george  ‹main›
+╰─➤  gco arash/stale-prs
+Switched to branch 'arash/stale-prs'
+Your branch is behind 'origin/arash/stale-prs' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Hulu/twdc/george  ‹arash/stale-prs›
+╰─➤  gl
+remote: Enumerating objects: 1799, done.
+remote: Counting objects: 100% (1297/1297), done.
+remote: Compressing objects: 100% (356/356), done.
+remote: Total 1799 (delta 1027), reused 1154 (delta 924), pack-reused 502
+Receiving objects: 100% (1799/1799), 276.65 KiB | 1.96 MiB/s, done.
+Resolving deltas: 100% (1220/1220), completed with 175 local objects.
+From github.twdcgrid.net:hulu-bbd/george
+ * [new branch]          releases/1.165             -> origin/releases/1.165
+ * [new branch]          tasks/consent-doppler      -> origin/tasks/consent-doppler
+ * [new branch]          tasks/update-release-1.165 -> origin/tasks/update-release-1.165
+ * [new tag]             v1.165                     -> v1.165
+Updating 5dca42a51..d0723d338
+Fast-forward
+ core/resources/css/_mixins.scss                                                                                 |  1 +
+ core/resources/css/_type.scss                                                                                   |  3 +++
+ core/resources/css/flavors.scss                                                                                 | 61 -------------------------------------------------------------
+ core/src/react/components/List.tsx                                                                              | 19 +++++++++++--------
+ core/src/react/components/StaticMenu/MenuItem/MenuItem.tsx                                                      |  5 +++++
+ core/src/react/components/StaticMenu/MenuItem/StaticMenuWithSubtitleItem/StaticMenuWithSubtitleItem.module.scss | 14 ++++++++++++++
+ core/src/react/components/StaticMenu/MenuItem/StaticMenuWithSubtitleItem/StaticMenuWithSubtitleItem.tsx         | 25 +++++++++++++++++++++++++
+ core/src/react/components/StaticMenu/StaticMenu.tsx                                                             |  1 +
+ core/src/react/components/StaticMenu/index.ts                                                                   |  3 ++-
+ core/src/react/components/StaticMenu/types.ts                                                                   | 14 +++++++++++++-
+ core/src/react/components/search/IconKey.module.scss                                                            |  7 +++++++
+ core/src/react/components/search/IconKey.tsx                                                                    | 23 +++++++++++++++++++++++
+ core/src/react/components/search/Key.module.scss                                                                | 19 +++++++++++++++++++
+ core/src/react/components/search/Key.tsx                                                                        | 24 ++++++++++++++++++++++++
+ core/src/react/components/search/SearchInputField.scss                                                          | 33 +++++++++++++++++++++++++++++++++
+ core/src/react/components/search/SearchInputField.tsx                                                           | 25 +++++++++++++++++++++++++
+ core/src/react/components/search/SearchKeyboard.module.scss                                                     | 20 ++++++++++++++++++++
+ core/src/react/components/search/SearchKeyboard.tsx                                                             | 87 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ core/src/workflows/account/FlavorMenu/FlavorPicker.tsx                                                          | 80 +++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------------
+ core/src/workflows/account/FlavorMenu/FlavorPickerPageService.ts                                                | 25 ++-----------------------
+ core/src/workflows/account/FlavorMenu/Flavors.scss                                                              | 37 ++++++++++++++++++-------------------
+ core/src/workflows/adexperience/AdExperienceWorkflow.ts                                                         | 65 +++++++++++++++++++++++++++++++++++++++++++++++++----------------
+ test/jest/core/src/react/components/FlavorPickerPage.test.tsx                                                   | 20 --------------------
+ 23 files changed, 433 insertions(+), 178 deletions(-)
+ delete mode 100644 core/resources/css/flavors.scss
+ create mode 100644 core/src/react/components/StaticMenu/MenuItem/StaticMenuWithSubtitleItem/StaticMenuWithSubtitleItem.module.scss
+ create mode 100644 core/src/react/components/StaticMenu/MenuItem/StaticMenuWithSubtitleItem/StaticMenuWithSubtitleItem.tsx
+ create mode 100644 core/src/react/components/search/IconKey.module.scss
+ create mode 100644 core/src/react/components/search/IconKey.tsx
+ create mode 100644 core/src/react/components/search/Key.module.scss
+ create mode 100644 core/src/react/components/search/Key.tsx
+ create mode 100644 core/src/react/components/search/SearchInputField.scss
+ create mode 100644 core/src/react/components/search/SearchInputField.tsx
+ create mode 100644 core/src/react/components/search/SearchKeyboard.module.scss
+ create mode 100644 core/src/react/components/search/SearchKeyboard.tsx
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Hulu/twdc/george  ‹arash/stale-prs›
+╰─➤  You may ignore tha
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Hulu/twdc/george  ‹main›
+╰─➤  cd                                                                                                                                                                                                                                        130 ↵
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  git clone git@github.com:akoushke/Testing.git
+Cloning into 'Testing'...
+The authenticity of host 'github.com (140.82.114.4)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Session Contents Restored on Jun 23, 2025 at 11:57 AM
+Last login: Mon Jun 23 11:56:13 on console
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  git clone git@github.com:akoushke/Testing.git
+Cloning into 'Testing'...
+The authenticity of host 'github.com (140.82.114.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  git clone git@github.com:akoushke/Testing.git                                                                                                                                                                                                                                                                                                                    128 ↵
+Cloning into 'Testing'...
+The authenticity of host 'github.com (140.82.114.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  !ss                                                                                                                                                                                                                                                                                                                                                              128 ↵
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ssh-add --apple-use-keychain ~/.ssh/id_ed25519                                                                                                                                                                                                                                                                                                                   128 ↵
+Identity added: /Users/arash.koushkebaghi/.ssh/id_ed25519 (arash.koushkebaghi@disney.com)
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ssh-keygen -t ed25519 -C "arash.koushkebaghi@disney.com"
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ssh-keygen -C "arash.koush@gmail.com"                                                                                                                                                                                                                                                                                                                            130 ↵
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/arash.koushkebaghi/.ssh/id_ed25519):
+/Users/arash.koushkebaghi/.ssh/id_ed25519 already exists.
+Overwrite (y/n)? n
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ssh-keygen                                                                                                                                                                                                                                                                                                                                                         1 ↵
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/arash.koushkebaghi/.ssh/id_ed25519):
+/Users/arash.koushkebaghi/.ssh/id_ed25519 already exists.
+Overwrite (y/n)? n
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  cat /Users/arash.koushkebaghi/.ssh/id_ed25519                                                                                                                                                                                                                                                                                                                      1 ↵
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABBXaXOwVc
+Wk3pzVE+aRRMIJAAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIGJ+vRX0jH0gj7Nc
+qYmH+AJ7N2Wjz2Ov8XnSSNBPa6FBAAAAoH0SoHsdkSVONAIC0xKS1KHsC5S2J3APrwCUj8
+JhuhS5Z1kpdwIgV7ZJjipLMmHZRNU9pXQeIyW/ygO/3mzu7FF1kNoZAAofux4ElOCfGSss
+EGnwEAbNYcQWBiA2KTgwDVqE8mgs6mhEToDEvVJlbQpqqAOKma1DaMH+Ax069J/bKZsMrL
+RFnUWVsyRFoqo5cVwUjd7Vfe+I8FKvaSuEyLk=
+-----END OPENSSH PRIVATE KEY-----
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ls -al ~/.ssh
+total 40
+drwx------@  7 arash.koushkebaghi  staff   224 Jun  4 17:05 .
+drwxr-x---+ 48 arash.koushkebaghi  staff  1536 Jun 23 12:13 ..
+-rw-r--r--@  1 arash.koushkebaghi  staff    76 May 19 13:16 config
+-rw-------@  1 arash.koushkebaghi  staff   464 Mar 25 12:16 id_ed25519
+-rw-r--r--@  1 arash.koushkebaghi  staff   111 Mar 25 12:16 id_ed25519.pub
+-rw-------@  1 arash.koushkebaghi  staff   865 May 19 12:59 known_hosts
+-rw-r--r--@  1 arash.koushkebaghi  staff   363 May 19 12:59 known_hosts.old
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  cat /Users/arash.koushkebaghi/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGJ+vRX0jH0gj7NcqYmH+AJ7N2Wjz2Ov8XnSSNBPa6FB arash.koushkebaghi@disney.com
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  git clone git@github.com:akoushke/Testing.git
+Cloning into 'Testing'...
+The authenticity of host 'github.com (140.82.113.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ssh-keygen -t ed25519 -C "arash.koush@gmail.com"                                                                                                                                                                                                                                                                                                                 128 ↵
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/arash.koushkebaghi/.ssh/id_ed25519):
+/Users/arash.koushkebaghi/.ssh/id_ed25519 already exists.
+Overwrite (y/n)? ^C
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ssh-keygen -t ed25511 -C "arash.koush@gmail.com"                                                                                                                                                                                                                                                                                                                 130 ↵
+unknown key type ed25511
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ssh-keygen                                                                                                                                                                                                                                                                                                                                                       255 ↵
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/arash.koushkebaghi/.ssh/id_ed25519):
+/Users/arash.koushkebaghi/.ssh/id_ed25519 already exists.
+Overwrite (y/n)? n
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ssh-keygen -t ed25519 -C "arash.koush@gmail.com" -f ~/.ssh/id_ed25519_github                                                                                                                                                                                                                                                                                       1 ↵
+
+Generating public/private ed25519 key pair.
+Enter passphrase for "/Users/arash.koushkebaghi/.ssh/id_ed25519_github" (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/arash.koushkebaghi/.ssh/id_ed25519_github
+Your public key has been saved in /Users/arash.koushkebaghi/.ssh/id_ed25519_github.pub
+The key fingerprint is:
+SHA256:dy4VzM1DzarNfuSS3H8CxsfuNZFFh/LDQPuZpFavEdo arash.koush@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|           .. .+o|
+|           oo=..+|
+|            ==B..|
+|             O=*o|
+|        S ..*=E+.|
+|         . == =oo|
+|          ...*.*.|
+|           .  B.*|
+|             ..++|
++----[SHA256]-----+
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  !ls
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ls -al ~/.ssh
+total 56
+drwx------@  9 arash.koushkebaghi  staff   288 Jun 23 12:17 .
+drwxr-x---+ 48 arash.koushkebaghi  staff  1536 Jun 23 12:17 ..
+-rw-r--r--@  1 arash.koushkebaghi  staff    76 May 19 13:16 config
+-rw-------@  1 arash.koushkebaghi  staff   464 Mar 25 12:16 id_ed25519
+-rw-------@  1 arash.koushkebaghi  staff   411 Jun 23 12:17 id_ed25519_github
+-rw-r--r--@  1 arash.koushkebaghi  staff   103 Jun 23 12:17 id_ed25519_github.pub
+-rw-r--r--@  1 arash.koushkebaghi  staff   111 Mar 25 12:16 id_ed25519.pub
+-rw-------@  1 arash.koushkebaghi  staff   865 May 19 12:59 known_hosts
+-rw-r--r--@  1 arash.koushkebaghi  staff   363 May 19 12:59 known_hosts.old
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  cat id_ed25519_github.pub
+cat: id_ed25519_github.pub: No such file or directory
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  cat ~/.ssh/id_ed25519_github.pub                                                                                                                                                                                                                                                                                                                                   1 ↵
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL/sR7JKHQU2wbFTlo+SAR8C09xLude3MrocOJDmNYpL arash.koush@gmail.com
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  git clone git@github.com:akoushke/Testing.git
+Cloning into 'Testing'...
+The authenticity of host 'github.com (140.82.112.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ssh-add --apple-use-keychain ~/.ssh/id_ed25519_github                                                                                                                                                                                                                                                                                                            128 ↵
+Identity added: /Users/arash.koushkebaghi/.ssh/id_ed25519_github (arash.koush@gmail.com)
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  git clone git@github.com:akoushke/Testing.git
+Cloning into 'Testing'...
+The authenticity of host 'github.com (140.82.112.4)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  cat ~/.ssh/id_ed25519_github                                                                                                                                                                                                                                                                                                                                     128 ↵
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACC/7EeySh0FNsGxU5aPkgEfAtPcS7nXtzK6HDiQ5jWKSwAAAJiqRTyDqkU8
+gwAAAAtzc2gtZWQyNTUxOQAAACC/7EeySh0FNsGxU5aPkgEfAtPcS7nXtzK6HDiQ5jWKSw
+AAAEC7bloRfnQsZPoUBxZ7iqXcfiDDQS0pbiaXNnXgk88FQb/sR7JKHQU2wbFTlo+SAR8C
+09xLude3MrocOJDmNYpLAAAAFWFyYXNoLmtvdXNoQGdtYWlsLmNvbQ==
+-----END OPENSSH PRIVATE KEY-----
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  cat ~/.ssh/id_ed25519_github.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL/sR7JKHQU2wbFTlo+SAR8C09xLude3MrocOJDmNYpL arash.koush@gmail.com
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGJ+vRX0jH0gj7NcqYmH+AJ7N2Wjz2Ov8XnSSNBPa6FB arash.koushkebaghi@disney.com
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ssh -vT git@github.com
+
+OpenSSH_9.9p1, LibreSSL 3.3.6
+debug1: Reading configuration data /Users/arash.koushkebaghi/.ssh/config
+debug1: /Users/arash.koushkebaghi/.ssh/config line 1: Applying options for *
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Reading configuration data /etc/ssh/ssh_config.d/100-macos.conf
+debug1: /etc/ssh/ssh_config.d/100-macos.conf line 1: Applying options for *
+debug1: Reading configuration data /etc/ssh/crypto.conf
+debug1: Authenticator provider $SSH_SK_PROVIDER did not resolve; disabling
+debug1: Connecting to github.com port 22.
+debug1: Connection established.
+debug1: identity file /Users/arash.koushkebaghi/.ssh/id_rsa type -1
+debug1: identity file /Users/arash.koushkebaghi/.ssh/id_rsa-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_9.9
+debug1: Remote protocol version 2.0, remote software version c02dec7b
+debug1: compat_banner: no match: c02dec7b
+debug1: Authenticating to github.com:22 as 'git'
+debug1: load_hostkeys: fopen /Users/arash.koushkebaghi/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: ecdh-sha2-nistp256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+debug1: load_hostkeys: fopen /Users/arash.koushkebaghi/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: hostkeys_find_by_key_hostfile: hostkeys file /Users/arash.koushkebaghi/.ssh/known_hosts2 does not exist
+debug1: hostkeys_find_by_key_hostfile: hostkeys file /etc/ssh/ssh_known_hosts does not exist
+debug1: hostkeys_find_by_key_hostfile: hostkeys file /etc/ssh/ssh_known_hosts2 does not exist
+The authenticity of host 'github.com (140.82.114.4)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤                                                                                                                                                                                                                                                                                                                                                                   255 ↵
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ssh -vT git@github.com                                                                                                                                                                                                                                                                                                                                           255 ↵
+
+OpenSSH_9.9p1, LibreSSL 3.3.6
+debug1: Reading configuration data /Users/arash.koushkebaghi/.ssh/config
+debug1: /Users/arash.koushkebaghi/.ssh/config line 1: Applying options for *
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Reading configuration data /etc/ssh/ssh_config.d/100-macos.conf
+debug1: /etc/ssh/ssh_config.d/100-macos.conf line 1: Applying options for *
+debug1: Reading configuration data /etc/ssh/crypto.conf
+debug1: Authenticator provider $SSH_SK_PROVIDER did not resolve; disabling
+debug1: Connecting to github.com port 22.
+debug1: Connection established.
+debug1: identity file /Users/arash.koushkebaghi/.ssh/id_rsa type -1
+debug1: identity file /Users/arash.koushkebaghi/.ssh/id_rsa-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_9.9
+debug1: Remote protocol version 2.0, remote software version c02dec7b
+debug1: compat_banner: no match: c02dec7b
+debug1: Authenticating to github.com:22 as 'git'
+debug1: load_hostkeys: fopen /Users/arash.koushkebaghi/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: ecdh-sha2-nistp256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+debug1: load_hostkeys: fopen /Users/arash.koushkebaghi/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: hostkeys_find_by_key_hostfile: hostkeys file /Users/arash.koushkebaghi/.ssh/known_hosts2 does not exist
+debug1: hostkeys_find_by_key_hostfile: hostkeys file /etc/ssh/ssh_known_hosts does not exist
+debug1: hostkeys_find_by_key_hostfile: hostkeys file /etc/ssh/ssh_known_hosts2 does not exist
+The authenticity of host 'github.com (140.82.112.4)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  cat ~/.ssh/known_hosts                                                                                                                                                                                                                                                                                                                                           255 ↵
+github.prod.hulu.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM6NZsJlIhPUovBHMtA4YF9ke8WACAv7E/ppoFvXdB4FYAtyqtfkuMWpxdiym9E9Gx4cSUza1RL3HYj989r0XsY=
+github.twdcgrid.net ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ6FUp1beZSE02gRgw5Q1xvaDT+wCAzKNkHE9IfkSVM16zJlPRHC3rCW4qZ47AFzU9pmsZmANMRJNHIRLuMOv5Y=
+github.twdcgrid.net ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgEqIe5jgceRrg/NC1b72MI/WTyQuO7yo4a83/IvNFR+DqR03WUeFn4nzVROIbd6pqQDUCQ0k5BgPsMXlYOI20n2007KADJ/zW4Sgp/xlej8vrErpEuFUt09P6FsJnC6W0Q/w7VUQ8SKHNo4D9iojWB0ApY/Da3nkcFoyOtB612wXWPEhSu8Yvt7O7V8ZopRMf/nAd91Cn4i4/R1pV0QxcI6tMzZGcHv+RI89OND5o4Px/6gl7cATk4T3rq5aen8KSn+zGro0LeGyElGiORnu6G69BudzTMOoc97m/P9pDLu0+woUEYnBERSKB6lzLw5cqZNqJ9PkhQvOzJv2xPMYB
+github.twdcgrid.net ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJIDVQoRdzNQZOpBM6npBdWfu89y2sadb//sNv9knG68
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  ssh-keyscan github.com >> ~/.ssh/known_hosts
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  cat ~/.ssh/known_hosts
+github.prod.hulu.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM6NZsJlIhPUovBHMtA4YF9ke8WACAv7E/ppoFvXdB4FYAtyqtfkuMWpxdiym9E9Gx4cSUza1RL3HYj989r0XsY=
+github.twdcgrid.net ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ6FUp1beZSE02gRgw5Q1xvaDT+wCAzKNkHE9IfkSVM16zJlPRHC3rCW4qZ47AFzU9pmsZmANMRJNHIRLuMOv5Y=
+github.twdcgrid.net ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgEqIe5jgceRrg/NC1b72MI/WTyQuO7yo4a83/IvNFR+DqR03WUeFn4nzVROIbd6pqQDUCQ0k5BgPsMXlYOI20n2007KADJ/zW4Sgp/xlej8vrErpEuFUt09P6FsJnC6W0Q/w7VUQ8SKHNo4D9iojWB0ApY/Da3nkcFoyOtB612wXWPEhSu8Yvt7O7V8ZopRMf/nAd91Cn4i4/R1pV0QxcI6tMzZGcHv+RI89OND5o4Px/6gl7cATk4T3rq5aen8KSn+zGro0LeGyElGiORnu6G69BudzTMOoc97m/P9pDLu0+woUEYnBERSKB6lzLw5cqZNqJ9PkhQvOzJv2xPMYB
+github.twdcgrid.net ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJIDVQoRdzNQZOpBM6npBdWfu89y2sadb//sNv9knG68
+# github.com:22 SSH-2.0-c02dec7b
+github.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCj7ndNxQowgcQnjshcLrqPEiiphnt+VTTvDP6mHBL9j1aNUkY4Ue1gvwnGLVlOhGeYrnZaMgRK6+PKCUXaDbC7qtbW8gIkhL7aGCsOr/C56SJMy/BCZfxd1nWzAOxSDPgVsmerOBYfNqltV9/hWCqBywINIR+5dIg6JTJ72pcEpEjcYgXkE2YEFXV1JHnsKgbLWNlhScqb2UmyRkQyytRLtL+38TGxkxCflmO+5Z8CSSNY7GidjMIZ7Q4zMjA2n1nGrlTDkzwDCsw+wqFPGQA179cnfGWOWRVruj16z6XyvxvjJwbz0wQZ75XK5tKSb7FNyeIEs4TT4jk+S4dhPeAUC5y+bDYirYgM4GC7uEnztnZyaVWQ7B381AK4Qdrwt51ZqExKbQpTUNn+EjqoTwvqNj4kqx5QUCI0ThS/YkOxJCXmPUWZbhjpCg56i+2aB6CmK2JGhn57K5mj0MNdBXA4/WnwH6XoPWJzK5Nyu2zB3nAZp+S5hpQs+p1vN1/wsjk=
+# github.com:22 SSH-2.0-c02dec7b
+github.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEmKSENjQEezOmxkZMy7opKgwFB9nkt5YRrYMjNuG5N87uRgg6CLrbo5wAdT/y6v0mKV0U2w0WZ2YB/++Tpockg=
+# github.com:22 SSH-2.0-c02dec7b
+github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl
+# github.com:22 SSH-2.0-c02dec7b
+# github.com:22 SSH-2.0-c02dec7b
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  git clone git@github.com:akoushke/Testing.git
+Cloning into 'Testing'...
+warning: You appear to have cloned an empty repository.
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  touch README.md
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  git add .
+fatal: not a git repository (or any of the parent directories): .git
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  rm README.md                                                                                                                                                                                                                                                                                                                                                     128 ↵
+╭─arash.koushkebaghi@LRFQVTM6QR ~
+╰─➤  cd Testing
+╭─arash.koushkebaghi@LRFQVTM6QR ~/Testing  ‹main›
+name: autoupdate
+on:
+  push: {}
+jobs:
+  autoupdate:
+    name: autoupdate
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: docker://chinthakagodawita/autoupdate-action:v1
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          DRY_RUN: "false"
+          PR_FILTER: "labelled"
+          PR_LABELS: "autoupdate,keep up-to-date,integration"
+          EXCLUDED_LABELS: "dependencies,wontfix"
+          MERGE_MSG: "Branch was auto-updated."
+          RETRY_COUNT: "5"
+          RETRY_SLEEP: "300"
+          MERGE_CONFLICT_ACTION: "fail"~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
